@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+<!--    <record id="privat_currency_res_config_settings_view_form" model="ir.ui.view">-->
+<!--        <field name="name">res.config.settings.view.form.inherit.privat.currency</field>-->
+<!--        <field name="model">res.config.settings</field>-->
+<!--        <field name="priority" eval="40"/>-->
+<!--        <field name="inherit_id" ref="base.res_config_settings_view_form"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//div[hasclass('o_setting_container')]/div[hasclass('settings')]/div[hasclass('app_settings_block')]/div[@id='invite_users']" position="after">-->
+<!--                <h2 class="mt32">DateTime sing</h2>-->
+<!--                <div class="row mt16 o_settings_container" id="datetime_process_setting_container">-->
+<!--                    <div class="col-12 col-lg-6 o_setting_box" id="datetime_process_connector">-->
+<!--                        <div>-->
+<!--                            <label for="datetime_suc_process"/>-->
+<!--                            <field name="datetime_suc_process" />-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+        <record id="crm_lead_view_form_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.view.form.inherit.crm</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="phonecall_count"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
